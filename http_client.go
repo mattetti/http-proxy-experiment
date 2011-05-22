@@ -65,6 +65,9 @@ func (this *HttpClient) Forward(req *http.Request, newDomain string) (resp *http
 			}
 		}
 
+		// TODO support for content in the body if we aren't
+		// dealing with GET/HEAD requests.
+
 		url = nReq.URL.String()
 		// Wrapped the client so I could do that ...sigh...
 		// Also, #Do i a wrapper around #send
